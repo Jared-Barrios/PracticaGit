@@ -1,0 +1,8 @@
+#cosas no importantes
+__pycache__/
+*py[cod]
+*$py.class
+
+#entorno
+env/
+.env

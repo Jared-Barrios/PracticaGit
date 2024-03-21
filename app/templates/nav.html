@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{{url_for('index')}}">Tienda Jared</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto">
+      <a class="nav-link" href="{{url_for('index')}}">Index</a>
+      <a class="nav-link" href="{{url_for('logout')}}">Cerrar sesión</a>
+
+      {% if current_user.tipousuario.id == 2 %}
+      <a class="nav-link" href="{{url_for('listar_libros')}}">Libros</a>
+      {%endif%}
+  </div>
+  <span class="navbar-text ">
+    <strong>{{ current_user.usuario }}</strong> ({{ current_user.tipousuario.nombre }})
+  </span>
+  </div>
+</nav>
